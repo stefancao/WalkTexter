@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- changed RelativeLayout to android.support.design.widget.CoordinatorLayout -->
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/mainactivity_background"
+    tools:context="com.example.tony.walktexter2.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <Button
+        android:text="Start Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/StartButton"
+        android:onClick="startWTService"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Stop Service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:id="@+id/StopButton"
+        android:onClick="stopWTService"
+        android:layout_below="@+id/StartButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp" />
+
+    <TextView
+        android:text="How to:\n Step 1: Press 'Start Service'\n Step 2: Start Walking\n Step 3: Start Texting\n
+ **Note: User may change between\n      different activities during their\n      use of the WalkTexter\n\n
+How to end service:\n  Step 1: Press 'Stop Service'\n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="180dp"
+        android:elevation="6dp"
+        android:id="@+id/fab_text"
+        app:pressedTranslationZ="12dp"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/ic_action_moreinfo"
+        android:elevation="6dp"
+        android:id="@+id/fab_moreinfo"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/fab2_color"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_action_plus"
+        android:elevation="6dp"
+        android:id="@+id/fab_plus"
+        app:pressedTranslationZ="12dp"
+        />
+</android.support.design.widget.CoordinatorLayout>
